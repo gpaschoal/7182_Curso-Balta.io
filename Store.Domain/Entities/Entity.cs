@@ -1,19 +1,20 @@
 using System;
+using Flunt.Notifications;
 
 namespace Store.Domain.Entities
 {
-    public abstract class Entity : IEquatable<Entity>
+  public abstract class Entity : Notifiable, IEquatable<Entity>
+  {
+    protected Entity()
     {
-        protected Entity()
-        {
-            Id = Guid.NewGuid();
-        }
-
-        public Guid Id { get; private set; }
-
-        public bool Equals(Entity other)
-        {
-            return Id == other.Id;
-        }
+      Id = Guid.NewGuid();
     }
+
+    public Guid Id { get; private set; }
+
+    public bool Equals(Entity other)
+    {
+      return Id == other.Id;
+    }
+  }
 }
