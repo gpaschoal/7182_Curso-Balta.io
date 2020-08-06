@@ -1,7 +1,7 @@
-using System;
-using System.Collections.Generic;
 using Flunt.Validations;
 using Store.Domain.Enums;
+using System;
+using System.Collections.Generic;
 
 namespace Store.Domain.Entities
 {
